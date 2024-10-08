@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+    
+             /*page 1 CSS*/    
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: ',sans-serif';
+        }
+        .header{
+            width: 100% ;
+            height: 100vh;
+            background-image: linear-gradient(rgba(5,0,136,0.5),rgba(5,0,136,0.5)),url(pexels-photo-267394.webp);
+            background-position: center;
+            background-size: cover;
+            overflow-x:  hidden;
+        }
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            transition: background 1s;
+        }
+        nav .logo{
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+        }
+        nav .logo img{
+            width: 60px;
+            margin-right: 10px;
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-weight: 600;
+            color: #fff;
+        }
+        nav:hover{
+            background-color: #fff;
+        }
+        nav:hover .logo{
+            color: #333;
+        }
+        nav:hover ul li a{
+            color: #333 ;
+        }
+        .content{
+            margin-top: 9%;
+            margin-left: 9%;
+            color: #fff;
+        }
+        .content h1{
+            font-size: 120px;
+            line-height: 140px;
+            font-weight: 600;
+        }
+        .content p{
+            max-width: 500px ;
+            line-height: 28px;
+            opacity: 0;
+        }
+        .links{
+            margin-top: 30px;
+            opacity: 0;
+        }
+        .links a{
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn{
+            border: 2px solid #fff;
+            padding: 10px 35px;
+            border-radius: 30px;
+            margin-right: 15px;
+        }
+        .slide-left{
+            animation: slideleft 1s linear forwards;
+        }
+        @keyframes slideleft{
+            0%{
+                transform: translate(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translate(0px);
+                opacity: 1;
+            }
+        }
+        p.slide-left{
+        animation-delay: 1s;
+        }
+        .links.slide-left{
+            animation-delay: 2s;
+        }
+
+
+        /*Page 2 CSS*/
+        .container {
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: space-around;  
+          }
+          
+          .row {
+            display: flex; 
+          }
+          
+          .hello, .hi, .hey {
+            flex: 1;  
+            min-width: 300px;  
+            margin: 10px;  
+            text-align: center;  
+            box-sizing: border-box;  
+          }
+          
+          /* Responsive adjustments (optional) */
+          @media (max-width: 768px) {
+            .container {
+              flex-direction: column; 
+            }
+            .hello, .hi, .hey {
+              min-width: auto;  
+              width: 100%;  
+            }
+          }
+        
+
+        /*Page 3 CSS*/
+        .page3 {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .comparison-table {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .column {
+            width: 300px;
+            background-color:#F5F5F7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 0 auto 10px auto;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .text strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- first page is starting from here -->
+    <div class="header">
+<nav>
+    <div class="logo"> 
+        <img src="l1eXTxm2w7TM6t9.png" alt="">
+        <span>Metrics</span>
+        </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Feature</a></li>
+        <li><a href="#">Fitness</a></li>
+        <li><a href="#">Connectivity</a></li>
+        <li><a href="#">Support</a></li>
+        </ul>
+</nav>
+<div class="content">
+    <h1 class="slide-left">THE<br>FUTURE</h1>
+    <P class="slide-left">Introducing our first smartwatch series—a sophisticated blend of technology and style, complementing our diverse collection of timepieces across all categories.</P>
+<div class="links slide-left">
+    <a href="#" class="btn">Learn More</a>
+    <a href="#">Contact Us</a>
+</div>
+    </div>
+    </div>
+
+
+    <!-- 2nd page is starting from here-->
+     <div class="page2"> 
+    <br>
+    <h1 style="margin-left: 50px;">Explore the line up</h1>
+    <nav class="container">
+        <div class="row">
+            <div class="hello">
+                <a> <b><img src="_watch1.png" alt="" style="width:70%;"> </b> 
+                    <br>  <br><br><h3 style="margin-left: 20px;">Metrics Watch SE</h3><p style="margin-left: 25px;">All the essentials. <br>
+                        Light on price.</p><h3 style="margin-left: 20px;">From ₹24900.00</h3>  <br><button type="button" style="border-radius:30px; font-size:16px; background-color: #0077ED; color: white; border-color: #0077ED; padding: 13px 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block; ">Learn more</button><button type="button" style="border-radius:30px; font-size:16px; background-color: white; color:#0077ED; border-color:white; padding: 10px 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block; ">Buy></button></a></div>
+                        
+<div class="hi">
+    <a> <b><img src="_watch2.png" alt="" style="width:70%;"> </b> 
+        <br>  <br><br><h3 style="margin-left: 20px;">Metrics Watch Series 10</h3><p style="margin-left: 25px;">All the essentials. <br>
+            Light on price.</p><h3 style="margin-left: 20px;">From ₹46900.00</h3>  <br><button type="button" style="border-radius:30px; font-size:16px; background-color: #0077ED; color: white; border-color: #0077ED; padding: 13px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; ">Learn more</button><button type="button" style="border-radius:30px; font-size:16px; background-color: white; color:#0077ED; border-color:white; padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; ">Buy></button></a></div>
+
+            <div class="hey">
+    <a> <b><img src="_watch4.png" alt="" style="width:70%;"> </b> 
+        <br>  <br><br><h3 style="margin-left: 20px;">Metrics Watch Ultra 2</h3><p style="margin-left: 25px;">All the essentials. <br>
+            Light on price.</p><h3 style="margin-left: 20px;">From ₹89900.00</h3>  <br><button type="button" style="border-radius:30px; font-size:16px; background-color: #0077ED; color: white; border-color: #0077ED; padding: 13px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; ">Learn more</button><button type="button" style="border-radius:30px; font-size:16px; background-color: white; color:#0077ED; border-color:white; padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; ">Buy></button></a></div>   
+    </nav>
+</div>
+
+
+    <!-- 3rd page is starting from here -->
+     <br><br><br><br>
+     <div class="page3"> 
+    <div class="comparison-table">
+        <div class="column">
+            <div class="section">
+                <div class="icon"><img src="_icon1.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">44 mm or 40 mm<br>aluminum case</div>
+            </div>
+            <div class="section">
+                <div class="icon check"><img src="_icon2.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Retina display<br>Up to 1,000 nits</div>
+            </div>
+            <div class="section">
+                <div class="icon chip"><img src="_icon3.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">S8 SIP<br>—</div>
+            </div>
+            <div class="section">
+                <div class="text">Metrix<br>Find Phone</div>
+            </div>
+            <div class="section">
+                <div class="icon heart"><img src="_icon4.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">—<br>—<br>High and low heart rate notifications<br>Irregular rhythm notifications<br>Low cardio fitness notifications</div>
+            </div>
+            <div class="section">
+                <div class="icon heart"><img src="_icon5.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Up to 18 hours<br>Low Power Mode<br>—</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="section">
+                <div class="icon"><img src="_icon1.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">46 mm or 42 mm<br>aluminum or titanium case</div>
+            </div>
+            <div class="section">
+                <div class="icon check"><img src="_icon2.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Always-On Retina display<br>Up to 2,000 nits</div>
+            </div>
+            <div class="section">
+                <div class="icon chip"><img src="_icon3.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">S10 SIP</div>
+            </div>
+            <div class="section">
+                <div class="text">Double tap gesture<br>Faster on-device<br>Precision Finding for Phone</div>
+            </div>
+            <div class="section">
+                <div class="icon heart"><img src="_icon4.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Blood Oxygen app<br>High and low heart rate notifications<br>Irregular rhythm notifications<br>Low cardio fitness notifications</div>
+            </div>
+            <div class="section">
+                <div class="icon heart"><img src="_icon5.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Up to 18 hours<br>Up to 36 in Low Power Mode<br>Fast charging</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="section">
+                <div class="icon"><img src="_icon1.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">49 mm<br>titanium case</div>
+            </div>
+            <div class="section">
+                <div class="icon check"><img src="_icon2.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Always-On Retina display<br>Up to 3,000 nits</div>
+            </div>
+            <div class="section">
+                <div class="icon chip"><img src="_icon3.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">S9 SIP</div>
+            </div>
+            <div class="section">
+                <div class="text">Double tap gesture<br>Faster on-device<br>Precision Finding for Phone</div>
+            </div>
+            <div class="section">
+                <div class="icon heart"><img src="_icon4.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Blood Oxygen app<br>ECG app<br>High and low heart rate notifications<br>Irregular rhythm notifications<br>Low cardio fitness notifications</div>
+            </div>
+            <div class="section">
+                <div class="icon heart"><img src="_icon5.png" alt="Watch 2" class="icon" style="width: 40px; height: 40px; display: block; margin: 0 auto;"></div>
+                <div class="text">Up to 36 hours<br>Up to 72 in Low Power Mode<br>Fast charging</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
